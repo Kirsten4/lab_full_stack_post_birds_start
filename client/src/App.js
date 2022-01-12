@@ -4,12 +4,12 @@ import './App.css';
 
 import SightingsForm from "./SightingsForm";
 import SightingsGrid from "./SightingsGrid";
-import { getSightings } from "./SightingService";
+import { getSightings} from "./SightingService";
 
 function App() {
 
   const [birdSightings, setBirdSightings] = useState([]);
-
+  
   useEffect(()=>{
     getSightings().then((allSightings)=>{
       setBirdSightings(allSightings);
